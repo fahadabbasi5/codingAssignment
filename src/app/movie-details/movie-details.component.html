@@ -1,0 +1,23 @@
+
+<div class="container">
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+
+    <h2>{{details[0].name}}</h2>
+    <p>( {{details[0].mpaaRating.type}} : {{details[0].mpaaRating.label || 'Not available'}})</p>
+    <div class="row">
+        <div class="col-sm-4">
+            <img src={{details[0].imgPath}} alt="" style="height: 300px; width: 90%;">
+        </div>
+        <div class="col-sm-8">
+            <h2>Details</h2>
+            <p>Genre : {{details[0].genre}}</p>
+            <p>Language : {{details[0].language}}</p>
+            <p>Duration : {{details[0].duration}} min</p>
+            <p>User Rating : {{details[0].userRating}}</p>
+            <h2>Sypnosis</h2>
+            <p>{{details[0].description}}</p>
+
+        </div>
+    </div>
+
+</div>

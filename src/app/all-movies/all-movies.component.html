@@ -1,0 +1,22 @@
+<div class="container">
+    <input type="text" class="form-control w-25" placeholder="Search Movies" name="searchText" [(ngModel)]="searchText">
+
+    <div class="my-2">
+        <div class="row">
+            <div class="col-sm-4 my-2 " *ngFor="let movie of movies | searchFilter : searchText" >
+                <div class="card" style="width: 18rem;">
+                    <img src={{movie.imgPath}} class="card-img-top"  alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{movie.name}}</h5>
+                      <p class="card-text">Duration : {{movie.duration}} min</p>
+                      <p class="card-text">User Rating : {{movie.userRating}}</p>
+                      <a routerLink="/movieDetails/{{movie.id}}"class="btn btn-primary">Details</a>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
